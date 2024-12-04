@@ -128,8 +128,8 @@ input[type='range'] {
 #mouth::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background: #00ff00; /* 파랑 */
   cursor: pointer;
 }
