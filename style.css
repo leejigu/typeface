@@ -109,22 +109,22 @@ body {
 input[type='range'] {
   -webkit-appearance: none; /* 기본 브라우저 스타일 제거 */
   width: 100%;
-  height: 16px;
+  height: 24px;
   background: #939393;
   border-radius: none;
   outline: none;
 }
 
-/* Eyebrow 슬라이더 핸들 (빨강) */
+/* Eyebrow 슬라이더 핸들 */
 #eyebrow::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background: #0000ff; /* 빨강 */
   cursor: pointer;
 }
-/* Mouth 슬라이더 핸들 (파랑) */
+/* Mouth 슬라이더 핸들  */
 #mouth::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
