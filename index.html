@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+    <script src="./script/sketch.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 id="catchphrase">폰트앞에서 표정관리 부탁드려요 🙏</h1>
+    <div id="editable">
+      <p contenteditable="true">
+        TYPING HERE
+        <br />
+        TYPEFACE
+      </p>
+    </div>
+
+    <!-- 텍스트 입력 필드 하단에 슬라이더 컨테이너 추가 -->
+    <div id="textAreaContainer">
+      <div class="sliderGroup">
+        <label for="eyebrow">Eyebrow</label>
+        <input type="range" id="eyebrow" min="0" max="1000" step="1" />
+      </div>
+      <div class="sliderGroup">
+        <label for="mouth">Mouth</label>
+        <input type="range" id="mouth" min="0" max="600" step="1" />
+      </div>
+      <div id="camaraChk">
+        <label for="camaraView">camara</label>
+        <input type="checkbox" id="camaraView" />
+      </div>
+    </div>
+
+    <script>
+      document.getElementById(`camaraView`).addEventListener('click', (e) => {
+        if (e.target.checked) {
+          document.querySelector('main').style.display = 'block';
+          document.querySelector('#editable > p').style.width = '50%';
+        } else {
+          document.querySelector('main').style.display = 'none';
+          document.querySelector('#editable > p').style.width = '100%';
+        }
+      });
+    </script>
+  </body>
+</html>
